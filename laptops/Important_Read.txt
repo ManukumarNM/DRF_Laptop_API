@@ -1,0 +1,9 @@
+## REGULAR DJANGO VIEWS AND SIMILER TO DJANGO FORMS API
+
+This laptops app -> Contains functioning Web API with Writing regular Django views using our Serializer.
+
+We're doing okay so far, we've got a serialization API that feels pretty similar to Django's Forms API, and 
+some regular Django views.
+
+Our API views don't do anything particularly special at the moment, beyond serving json responses, and there are
+some error handling edge cases we'd still like to clean up, but it's a functioning Web API.

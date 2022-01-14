@@ -1,0 +1,17 @@
+## FUNCTION BASED VIEWS 
+
+This v1_laptops app -> Contains functioning Web API with Writing @api_view decorator for working
+ Function Based views using our Serializer.
+
+The changes occur in this api compare to previous api are shown below:
+Requests and Responses
+
+Request objects -
+request.POST  # Only handles form data.  Only works for 'POST' method.
+request.data  # Handles arbitrary data.  Works for 'POST', 'PUT' and 'PATCH' methods.
+
+Response objects -
+return Response(data)  # Renders to content type as requested by the client.
+
+Status codes -
+It will also change compare to previous version rathern than just status code number it will give some text.
