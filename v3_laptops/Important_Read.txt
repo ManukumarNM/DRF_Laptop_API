@@ -1,0 +1,12 @@
+## USING MIXINS BASED VIEWS 
+
+Note: Only changed the views.py file when it compared to previous version v2_laptops
+
+One of the big wins of using class-based views is that it allows us to easily compose reusable bits of behaviour.
+The create/retrieve/update/delete operations that we've been using so far are going to be pretty similar for any 
+model-backed API views we create. Those bits of common behaviour are implemented in REST framework's mixin classes.
+
+
+We're building our view using GenericAPIView, and adding in ListModelMixin and CreateModelMixin.
+The base class provides the core functionality, and the mixin classes provide the .list() and .create() actions.
+ We're then explicitly binding the get and post methods to the appropriate actions. Simple enough stuff so far.
