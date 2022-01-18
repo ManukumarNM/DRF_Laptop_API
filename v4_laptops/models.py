@@ -1,4 +1,5 @@
 from django.db import models
+# from django.contrib.auth.models import User
 
 PROCESSOR_CHOICES = (
     ("", "----"),
@@ -32,6 +33,10 @@ class V4_Laptop(models.Model):
     ssd = models.BooleanField(default=False)
     processor = models.CharField(choices=PROCESSOR_CHOICES, default=None, max_length=50)
     color = models.CharField(choices=COLOR_CHOICES, default=None, max_length=50)
+    owner = models.ForeignKey('auth.User', related_name='v4_laptops', on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['stored']
+
+    # def save(self, *args, **kwargs):
+    #     super().save(*args, **kwargs)

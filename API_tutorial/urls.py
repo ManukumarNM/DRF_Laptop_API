@@ -24,5 +24,5 @@ urlpatterns = [
     path('v3_laptops/', include('v3_laptops.urls')),
     path('v4_laptops/', include('v4_laptops.urls')),
 
-
+    path('api-auth/', include('rest_framework.urls')),
 ]
