@@ -15,8 +15,9 @@ class V4_LaptopSerializer(serializers.ModelSerializer):
 # are simply a shortcut for creating serializer classes:
 
 class UserSerializer(serializers.ModelSerializer):
-    laptops = serializers.PrimaryKeyRelatedField(many=True, queryset=V4_Laptop.objects.all())
+    #Because 'v4_laptops' is a reverse relationship on the User model
+    v4_laptops = serializers.PrimaryKeyRelatedField(many=True, queryset=V4_Laptop.objects.all())
 
     class Meta:
         model = User
-        fields = ['id', 'username', 'laptops']
+        fields = ['id', 'username', 'v4_laptops']
