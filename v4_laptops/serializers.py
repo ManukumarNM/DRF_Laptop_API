@@ -11,8 +11,8 @@ class V4_LaptopSerializer(serializers.ModelSerializer):
         model = V4_Laptop
         fields = ['id', 'brand', 'model', 'ssd', 'processor', 'color', 'owner']
 
-# ModelSerializer classes don't do anything particularly magical, they 
-# are simply a shortcut for creating serializer classes:
+    # ModelSerializer classes don't do anything particularly magical, they 
+    # are simply a shortcut for creating serializer classes:
 
 class UserSerializer(serializers.ModelSerializer):
     #Because 'v4_laptops' is a reverse relationship on the User model
