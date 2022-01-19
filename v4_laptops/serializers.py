@@ -16,6 +16,7 @@ class V4_LaptopSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     #Because 'v4_laptops' is a reverse relationship on the User model
+    #For more info for reverse relationship study django-tutorial
     v4_laptops = serializers.PrimaryKeyRelatedField(many=True, queryset=V4_Laptop.objects.all())
 
     class Meta:
