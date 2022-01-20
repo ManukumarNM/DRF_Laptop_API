@@ -5,6 +5,7 @@ from v4_laptops.serializers import V4_LaptopSerializer, UserSerializer
 from rest_framework import generics
 from django.contrib.auth.models import User
 from rest_framework import permissions
+from v4_laptops.permissions import IsOwnerOrReadOnly
 
 
 class LaptopList(generics.ListCreateAPIView):
@@ -20,7 +21,7 @@ class LaptopList(generics.ListCreateAPIView):
 class LaptopDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = V4_Laptop.objects.all()
     serializer_class = V4_LaptopSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
 
 
 class UserList(generics.ListAPIView):
